@@ -74,6 +74,7 @@
         break-view-class="break-view"
         break-view-link-class="break-view-link"
       >
+        <template #prev>- Past</template>
         <span slot="breakViewContent">
           <svg width="16" height="4" viewBox="0 0 16 4">
             <circle fill="#999999" cx="2" cy="2" r="2" />
@@ -81,6 +82,7 @@
             <circle fill="#999999" cx="14" cy="2" r="2" />
           </svg>
         </span>
+        <template #next>Future +</template>
       </paginate>
     </div>
   </div>

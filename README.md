@@ -196,6 +196,10 @@ HTML
 | `last-button-text` | `String` | Text for last button. (Not visible when `first-last-button` is false. You can use HTML here.) **default: 'Last'** |
 | `hide-prev-next` | `Boolean` | Hide prev/next button when there is no previous or next page. **default: false** |
 
+## Slots
+
+* prev - the content inside the previous button. This will override the content in prev-text
+* next - the content inside the next button. This will override the content in next-text
 
 ## Demo
 

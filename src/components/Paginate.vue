@@ -22,7 +22,7 @@
         @keyup.enter="prevPage()"
         :class="prevLinkClass"
         :tabindex="firstPageSelected() ? -1 : 0"
-        v-html="prevText"
+        ><slot name="prev"><span v-html="prevText"></span></slot
       ></a>
     </li>
 
@@ -63,7 +63,7 @@
         @keyup.enter="nextPage()"
         :class="nextLinkClass"
         :tabindex="lastPageSelected() ? -1 : 0"
-        v-html="nextText"
+        ><slot name="next"><span v-html="nextText"></span></slot
       ></a>
     </li>
 
@@ -96,7 +96,7 @@
       @keyup.enter="prevPage()"
       :class="[prevLinkClass, firstPageSelected() ? disabledClass : '']"
       tabindex="0"
-      v-html="prevText"
+      ><slot name="prev"><span v-html="prevText"></span></slot
     ></a>
     <template v-for="page in pages">
       <a
@@ -134,7 +134,7 @@
       @keyup.enter="nextPage()"
       :class="[nextLinkClass, lastPageSelected() ? disabledClass : '']"
       tabindex="0"
-      v-html="nextText"
+      ><slot name="next"><span v-html="nextText"></span></slot
     ></a>
     <a
       v-if="firstLastButton"
