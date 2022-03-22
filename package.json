@@ -6,21 +6,21 @@
   "scripts": {
     "build": "rm -rf ./dist && webpack --config ./webpack.config.js",
     "test": "BABEL_ENV=test ./node_modules/karma/bin/karma start test/karma.conf.js --single-run",
-    "demo": "webpack-dev-server --config ./demo/webpack.config.js"
+    "dev": "webpack-dev-server --config ./demo/webpack.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lokyoung/vuejs-paginate.git"
+    "url": "git+https://github.com/fundarealestate/vuejs-paginate.git"
   },
   "keywords": [
     "vue",
     "paginate",
     "pagination"
   ],
-  "author": "Cain Liu",
+  "author": "Funda",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lokyoung/vuejs-paginate/issues"
+    "url": "https://github.com/fundarealestate/vuejs-paginate/issues"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
