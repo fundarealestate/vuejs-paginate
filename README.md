@@ -1,4 +1,5 @@
 # vuejs-paginate
+
 [![npm version](https://badge.fury.io/js/vuejs-paginate.svg)](https://badge.fury.io/js/vuejs-paginate) [![Build Status](https://travis-ci.org/lokyoung/vuejs-paginate.svg?branch=master)](https://travis-ci.org/lokyoung/vuejs-paginate) [![Code Climate](https://codeclimate.com/github/lokyoung/vuejs-paginate/badges/gpa.svg)](https://codeclimate.com/github/lokyoung/vuejs-paginate)
 
 [![NPM](https://nodei.co/npm/vuejs-paginate.png)](https://nodei.co/npm/vuejs-paginate/)
@@ -16,28 +17,30 @@ Easy to use by providing simple api. And you can customize the style of this com
 ### NPM
 
 Install the npm package.
+
 ```js
-$ npm install vuejs-paginate --save
+npm install vuejs-paginate --save
 ```
 
 Register the component.
 - ES5
+
 ```js
 var Paginate = require('vuejs-paginate')
 Vue.component('paginate', Paginate)
 ```
 
 - ES6
+
 ```js
 import Paginate from 'vuejs-paginate'
 Vue.component('paginate', Paginate)
 ```
 
-*Note*: For version <= 0.5.0, use `Vue.use(Paginate)` to register the component after import the package. But recommend to use the latest version now.
-
 ### CDN
 
 Include the source file.
+
 ```html
 <!-- use the latest release -->
 <script src="https://unpkg.com/vuejs-paginate@latest"></script>
@@ -46,6 +49,7 @@ Include the source file.
 ```
 
 Register the component.
+
 ```js
 Vue.component('paginate', VuejsPaginate)
 ```
@@ -54,31 +58,17 @@ Vue.component('paginate', VuejsPaginate)
 
 ### In Vue Template
 
-**Basic Usage**
+#### Basic Usage
+
 ```html
 <paginate
   :page-count="20"
-  :click-handler="functionName"
-  :prev-text="'Prev'"
-  :next-text="'Next'"
-  :container-class="'className'">
-</paginate>
-```
-
-*Note*: In vue template, camelCase and kebab-case are both supported. For example, you can either use prop `page-count` or `pageCount`. They are leading to the same result.
-
-So this is also avaliable
-```html
-<paginate
-  :pageCount="20"
-  :clickHandler="functionName"
-  :prevText="'Prev'"
-  :nextText="'Next'"
-  :containerClass="'className'">
+  :click-handler="functionName">
 </paginate>
 ```
 
 **Example**
+
 ```html
 <template>
   <paginate
@@ -112,6 +102,7 @@ export default {
 ```
 
 ### Value Binding
+
 Use `v-model` to set the selected page number. You can programmatically modify the current page by using this.
 
 ```html
@@ -141,11 +132,13 @@ export default {
 ```
 
 ### In HTML
+
 Must use kebab-case for props in pure HTML.
 
 **Example**
 
 JavaScript
+
 ```js
 Vue.component('paginate', VuejsPaginate)
 
@@ -160,6 +153,7 @@ new Vue({
 ```
 
 HTML
+
 ```html
 <div id="app">
   <paginate
@@ -202,51 +196,16 @@ HTML
 | `last-button-text` | `String` | Text for last button. (Not visible when `first-last-button` is false. You can use HTML here.) **default: 'Last'** |
 | `hide-prev-next` | `Boolean` | Hide prev/next button when there is no previous or next page. **default: false** |
 
-## Customize inner HTML (experimental)
-You can customize the inner HTML of the previous button, next button, and break view indicator, with the `slot` tag.
-
-**Slot names**
-
-| Name | Description |
-| --- | --- |
-| `prevContent` | Previous button |
-| `nextContent` | Next button |
-| `breakViewContent` | Break view indicator |
-
-**Note**
-Slot of `prevContent` and `nextContent` are not supported after `v1.9.5`. You can directly set the HTML by `prev-text` and `next-text` props.
- 
-**Example**
-```html
-<paginate
-  :page-count="10"
-  :container-class="pagination"
-  :prev-text="prev"
-  :next-text="next"
-  :click-handler="clickCallback">
-
-  <span slot="prevContent">Changed previous button</span>
-  <span slot="nextContent">Changed next button</span>
-  <span slot="breakViewContent">
-    <svg width="16" height="4" viewBox="0 0 16 4">
-      <circle fill="#999999" cx="2" cy="2" r="2" />
-      <circle fill="#999999" cx="8" cy="2" r="2" />
-      <circle fill="#999999" cx="14" cy="2" r="2" />
-    </svg>
-  </span>
-
-</paginate>
-```
-
 
 ## Demo
-You can see the demo for quickly understand how to use this package.
+
+You can see the demo to quickly understand how to use this package.
 
 ```sh
-$ git clone git@github.com:lokyoung/vuejs-paginate.git
+$ git clone git@github.com:fundarealestate/vuejs-paginate.git
 $ cd vuejs-paginate
 $ npm install
-$ npm run demo
+$ npm run dev
 ```
 
 Check the code from `./demo/index.html` and `./demo/App.vue`.
