@@ -1,7 +1,7 @@
 <template>
-  <div style="padding-left: 20px;">
+  <div style="padding-left: 20px">
     <h2>vuejs-paginate</h2>
-    <hr>
+    <hr />
     <div>
       <h3>Pagination component with 'li' tag surrounded</h3>
       <!-- The 'pagination' style using in containerClass comes from bootstrap -->
@@ -58,7 +58,6 @@
       ></paginate>
     </div>
 
-
     <div>
       <h3>Pagination component with SVG for view break</h3>
       <paginate
@@ -91,27 +90,8 @@
 export default {
   data() {
     return {
-      page: 1
-    }
+      page: 1,
+    };
   },
-}
+};
 </script>
-
-<style lang="css">
-.page-item {
-}
-.page-link-item {
-}
-.prev-item {
-}
-.prev-link-item {
-}
-.next-item {
-}
-.next-link-item {
-}
-.break-view {
-}
-.break-view-item {
-}
-</style>
