@@ -379,6 +379,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+div, ul, li, a {
+  user-select: none;
+}
 a {
   cursor: pointer;
 }
